@@ -8,7 +8,7 @@ import org.springframework.stereotype.Repository;
 import com.adpguima.starwars.model.Planets;
 
 @Repository
-public interface PlanetsRepository extends JpaRepository<Planets, String> {
+public interface PlanetsRepository extends JpaRepository<Planets, Long> {
 
 	List<Planets> findByNameIgnoreCase(String name);
 

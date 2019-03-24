@@ -5,8 +5,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-
-import org.springframework.data.annotation.Transient;
+import javax.persistence.Transient;
 
 @Entity(name = "Planets")
 public class Planets {
@@ -24,6 +23,12 @@ public class Planets {
 	private Integer filmsCount;
 
 	public Planets() {
+	}
+
+	public Planets(String name, String climate, String terrain) {		
+		this.name = name;
+		this.climate = climate;
+		this.terrain = terrain;
 	}
 
 	public long getPlanetId() {

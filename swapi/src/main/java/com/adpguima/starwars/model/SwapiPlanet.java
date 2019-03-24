@@ -30,6 +30,14 @@ public class SwapiPlanet {
 		this.films = films;
 	}
 
+	public Integer getFilmsCount() {
+		if (this.films == null) {
+			return 0;
+		} else {
+			return this.films.length;
+		}
+	}
+
 	@Override
 	public String toString() {
 		return "SwapiPlanet [name=" + name + ", films=" + Arrays.toString(films) + "]";
